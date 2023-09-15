@@ -26,11 +26,11 @@ characterThreeMousePosition=[(characterThreeLeft+characterThreeRight)/2, screenH
 #(starting x, starting y, width, height)
 """
 iml=pyautogui.screenshot(region=(478,478,402,97))
-iml.save(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/characterOne.png")
+iml.save(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/characterOne.png")
 iml=pyautogui.screenshot(region=(1075,478,402,97))
-iml.save(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/characterTwo.png")
+iml.save(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/characterTwo.png")
 iml=pyautogui.screenshot(region=(1650,478,402,97))
-iml.save(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/characterThree.png")
+iml.save(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/characterThree.png")
  """
 def loopSecondaryTraits(mainTraitLoc,character,traits):
     if character=='1':
@@ -275,24 +275,24 @@ loopC3=True
 user=''
 
 #Traits implemented
-tripleTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Three_trait.png")
-ISSTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/IIS_trait.png")
-UBTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/UB_trait.png")
-APLTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/APL_trait.png")
-GPhobeTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/GPhobe_trait.png")
-IndefTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/Indef_trait.png")
-CareTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/Care_trait.PNG")
-HLCTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/HLC_trait.PNG")
-ImmTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/Imm_trait.PNG")
-EncourTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/Encour_trait.PNG")
-FDTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/FD_trait.PNG")
-HoHTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/HoH_trait.PNG")
-HPTTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/HPT_trait.PNG")
-FSTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Traits/FS_trait.PNG")
+tripleTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Three_trait.png")
+ISSTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/IIS_trait.png")
+UBTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/UB_trait.png")
+APLTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/APL_trait.png")
+GPhobeTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/GPhobe_trait.png")
+IndefTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/Indef_trait.png")
+CareTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/Care_trait.PNG")
+HLCTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/HLC_trait.PNG")
+ImmTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/Imm_trait.PNG")
+EncourTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/Encour_trait.PNG")
+FDTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/FD_trait.PNG")
+HoHTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/HoH_trait.PNG")
+HPTTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/HPT_trait.PNG")
+FSTrait = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Traits/FS_trait.PNG")
 
 #Skills implemented
-Hygiene = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Skills/Hygiene.PNG")
-Chemistry = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDAutoClicker/Skills/Chemistry.PNG")
+Hygiene = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Skills/Hygiene.PNG")
+Chemistry = cv2.imread(r"C:/Users/video/Desktop/Coding fun/Fun Utility/SoDCharacterRoller/Skills/Chemistry.PNG")
 
 traitGroups=[[UBTrait,IndefTrait,IndefTrait,False],[ISSTrait,GPhobeTrait,GPhobeTrait,False],[APLTrait,APLTrait,APLTrait,False]]
 mainTraits=[[UBTrait,False],[ISSTrait,False],[APLTrait,False]]
