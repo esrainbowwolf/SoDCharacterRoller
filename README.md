@@ -16,3 +16,9 @@ This is currently commented out because I see no need in specifying what my char
 
 When initially running the code it will ask if there are any characters you want it to skip.
 Use this if there is a character you like already.
+
+KEEP IN MIND: This program moves your mouse and keyboard.
+While this is running you will basically not be able to use your PC while this runs.
+ALSO: This uses your systems Main Monitor and will not use your secondary monitor for this.
+There is a 10 second timer for if you want to continue watching something on your pc while your pc is rolling characters.
+I recommend having videos set in a playlist or a series while this is rolling because your videos can still play on your second monitor while this is rolling.
