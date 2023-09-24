@@ -19,16 +19,6 @@ characterOneMousePosition=[(characterOneLeft+characterOneRight)/2, screenHeight/
 characterTwoMousePosition=[(characterTwoLeft+characterTwoRight)/2, screenHeight/2]
 characterThreeMousePosition=[(characterThreeLeft+characterThreeRight)/2, screenHeight/2]
 
-#Screenshots images of character regions
-#(starting x, starting y, width, height)
-"""
-iml=pyautogui.screenshot(region=(478,478,402,97))
-iml.save(r"characterOne.png")
-iml=pyautogui.screenshot(region=(1075,478,402,97))
-iml.save(r"characterTwo.png")
-iml=pyautogui.screenshot(region=(1650,478,402,97))
-iml.save(r"characterThree.png")
- """
 #Checks if there are 3 traits
 def checkIfThreeTraits(character):
     tripleTraitList=list(pyautogui.locateAllOnScreen(tripleTrait, grayscale=True, confidence=0.9))
@@ -49,7 +39,7 @@ def checkIfThreeTraits(character):
     
     return False
         
- 
+#Checks secondary Traits
 def loopSecondaryTraits(mainTraitLoc,character,traits):
     print("Checking secondary stuff\n")
     if character=='1':
@@ -80,7 +70,8 @@ def loopSecondaryTraits(mainTraitLoc,character,traits):
         exit(1)
     
     return False
-    
+
+#For when you specify every trait you want
 def specifyLoopAllCharacters(traitGroups, loopC1, loopC2, loopC3):
     pyautogui.moveTo(characterOneMousePosition)
     while loopC1==True and (traitGroups[0][3]==False or traitGroups[1][3]==False or traitGroups[2][3]==False):
@@ -181,6 +172,7 @@ def specifyLoopAllCharacters(traitGroups, loopC1, loopC2, loopC3):
             pyautogui.press(['t'])
     print("Character Three Done!\n")
 
+#Loops characters until a character lands on a main trait you named
 def optionalLoopAllCharacters(mainTraits,secondaryTraits,loopC1, loopC2, loopC3):
     found=False
     pyautogui.moveTo(characterOneMousePosition)
@@ -329,29 +321,14 @@ Hygiene = cv2.imread(r"Skills/Hygiene.PNG")
 Chemistry = cv2.imread(r"Skills/Chemistry.PNG")
 Cooking = cv2.imread(r"Skills/Cooking.PNG")
 
+#Array used for specifying every trait
 traitGroups=[[UBTrait,IndefTrait,IndefTrait,False],[ISSTrait,GPhobeTrait,GPhobeTrait,False],[APLTrait,APLTrait,APLTrait,False]]
+#Array used for looking for main trait
 mainTraits=[[UBTrait,False],[ISSTrait,False],[Cooking,False]]
+#Array used for looking for what secondary trait you want
 secondaryTraits=[SotGTrait,GHTrait,PANTrait,HTTrait,SBiPTrait,NBSTrait,KETrait,ELaBTrait,LACTrait, PETrait, HSFTrait,Chemistry,FSTrait,HPTTrait,HoHTrait,FDTrait,EncourTrait,ImmTrait,IndefTrait,HLCTrait,UBTrait,ISSTrait,Hygiene]
 #timer for tracking how long it takes to get the characters done
 start_time=time.time()
-
-#Used for testing if we can even find that trait
-""" while 1:
-    if pyautogui.locateOnScreen(Hygiene, grayscale=True, confidence=0.9) != None:
-        print("I can see it")
-        ISSloc=pyautogui.locateOnScreen(Hygiene, grayscale=True, confidence=0.9)
-        if ISSloc.left>characterOneLeft and ISSloc.left<characterOneRight:
-            print("Character One")
-        elif ISSloc.left>1070 and ISSloc.left<characterTwoRight:
-            print("Character Two")
-        elif ISSloc.left>characterThreeLeft and ISSloc.left<characterThreeRight:
-            print("Character Three")
-        
-        time.sleep(0.5)
-        break
-    else:
-        print("I am unable to see it")
-        time.sleep(0.5) """
 
 #loops all characters at once looking for each trait group
 while user!='n':
@@ -402,5 +379,5 @@ while mainTraits[0][1]==False or mainTraits[1][1]==False or mainTraits[2][1]==Fa
         user=input("Trait group three wasn't rolled for. Is this fine? y/n\n")
         if user=='y':
             traitGroups[2][3]=True """
-    
-print ("This took:"+str((time.time()-start_time)/60)+ "minutes to run")
+runningMinutes=(time.time()-start_time)/60
+print ("This took: {runningMinutes} minutes to run")
