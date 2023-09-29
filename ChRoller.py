@@ -367,7 +367,9 @@ while user!='n':
 
 #Set main traits, then set your seconday traits/skills you're ok with getting
 while mainTraits[0][1]==False or mainTraits[1][1]==False or mainTraits[2][1]==False:
-    time.sleep(10)
+    for i in range(10):
+        print(str(10-i))
+        sleep(1)
     print("Character rolling starts now!\n")
     optionalLoopAllCharacters(mainTraits,secondaryTraits,loopC1, loopC2, loopC3)
     
